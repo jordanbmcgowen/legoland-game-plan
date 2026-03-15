@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jackson's LEGOLAND Game Plan — April 1, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #FAFAF8;
+  color: #1A1A1A;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font: inherit; }
+
+/* ========== CSS VARIABLES ========== */
+:root {
+  --lego-red: #DA291C;
+  --lego-yellow: #FFD500;
+  --lego-blue: #006CB7;
+  --lego-green: #00AF4D;
+  --lego-dark: #1A1A1A;
+  --lego-orange: #FF6D00;
+  --lego-teal: #00897B;
+  --lego-gold: #FFB300;
+  --lego-light: #FFF9E6;
+  --bg-white: #FFFFFF;
+  --bg-page: #FAFAF8;
+  --text-muted: #666666;
+  --border-light: #E8E8E4;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --shadow-xl: 0 12px 40px rgba(0,0,0,0.15);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --max-width: 1200px;
+}
+
+/* ========== LEGO BRICK DECORATIVE ========== */
+.lego-studs {
+  position: relative;
+}
+.lego-studs::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: calc(100% - 40px);
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 4px,
+    currentColor 4px,
+    currentColor 20px,
+    transparent 20px,
+    transparent 28px
+  );
+  border-radius: 4px 4px 0 0;
+  opacity: 0.15;
+}
+
+/* ========== STICKY NAV ========== */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 3px solid var(--lego-red);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease;
+}
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height: 56px;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--lego-red);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+.nav-brick {
+  width: 24px;
+  height: 16px;
+  background: var(--lego-red);
+  border-radius: 3px;
+  position: relative;
+  flex-shrink: 0;
+}
+.nav-brick::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 3px;
+  width: 7px;
+  height: 5px;
+  background: var(--lego-red);
+  border-radius: 3px 3px 0 0;
+  box-shadow: 11px 0 0 var(--lego-red);
+}
+.nav-link {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: 20px;
+  transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-link:hover {
+  background: var(--lego-yellow);
+  color: var(--lego-dark);
+}
+
+/* ========== HERO HEADER ========== */
+.hero {
+  background: linear-gradient(135deg, var(--lego-red) 0%, #B71C1C 40%, #C62828 60%, var(--lego-red) 100%);
+  color: white;
+  padding: 120px 20px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255,213,0,0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(0,108,183,0.15) 0%, transparent 40%);
+  pointer-events: none;
+}
+/* Decorative LEGO studs pattern */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.06) 8px, transparent 8px);
+  background-size: 40px 40px;
+  background-position: 10px 10px;
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  opacity: 0.9;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.stat-pill .icon {
+  font-size: 16px;
+}
+
+/* ========== SECTION STYLING ========== */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--lego-red);
+  margin-bottom: 8px;
+}
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--lego-dark);
+  line-height: 1.2;
+}
+.section-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-divider {
+  border: none;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--lego-red) 0 30px,
+    var(--lego-yellow) 30px 60px,
+    var(--lego-blue) 60px 90px,
+    var(--lego-green) 90px 120px
+  );
+  border-radius: 2px;
+  margin: 0;
+}
+
+/* ========== BEFORE THE TRIP ========== */
+.prep-section {
+  background: white;
+}
+.prep-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 28px;
+  background: #F0F0EC;
+  border-radius: var(--radius-md);
+  padding: 4px;
+  justify-content: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.prep-tab {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: all 0.25s;
+  text-align: center;
+}
+.prep-tab.active {
+  background: white;
+  color: var(--lego-dark);
+  box-shadow: var(--shadow-sm);
+}
+.prep-tab:hover:not(.active) {
+  color: var(--lego-dark);
+}
+.prep-panel {
+  display: none;
+}
+.prep-panel.active {
+  display: block;
+}
+.checklist-group {
+  margin-bottom: 32px;
+}
+.checklist-group-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.checklist-group-title .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-page);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid var(--border-light);
+}
+.checklist li .check-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #CCC;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.checklist li .check-box:hover {
+  border-color: var(--lego-green);
+  background: #E8F5E9;
+}
+.checklist li.checked .check-box {
+  background: var(--lego-green);
+  border-color: var(--lego-green);
+}
+.checklist li.checked .check-box::after {
+  content: '✓';
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+.checklist li.checked > div {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.checklist li {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.checklist li.critical {
+  border-color: var(--lego-red);
+  background: #FFF5F5;
+}
+.checklist li.critical .check-box {
+  border-color: var(--lego-red);
+}
+.checklist li.critical.checked .check-box {
+  background: var(--lego-green);
+  border-color: var(--lego-green);
+}
+.checklist li.critical.checked {
+  border-color: var(--lego-green);
+  background: #E8F5E9;
+}
+.critical-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--lego-red);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* ========== PACKING GRID ========== */
+.packing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.pack-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--bg-page);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.pack-item.critical {
+  border-color: var(--lego-red);
+  background: #FFF5F5;
+}
+.pack-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.pack-icon.red { background: #FDECEA; }
+.pack-icon.yellow { background: #FFF8E1; }
+.pack-icon.blue { background: #E3F2FD; }
+.pack-icon.green { background: #E8F5E9; }
+.pack-icon.orange { background: #FFF3E0; }
+.pack-icon.teal { background: #E0F2F1; }
+
+.pack-item {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  position: relative;
+}
+.pack-item:hover {
+  border-color: var(--lego-green);
+}
+.pack-item.checked {
+  background: #E8F5E9;
+  border-color: var(--lego-green);
+}
+.pack-item.checked::before {
+  content: '✓';
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--lego-green);
+  background: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.pack-item.checked > div:last-child {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.pack-item.critical.checked {
+  border-color: var(--lego-green);
+  background: #E8F5E9;
+}
+
+/* Progress bar for checklists */
+.checklist-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-white);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  margin-bottom: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.checklist-progress-bar {
+  flex: 1;
+  height: 8px;
+  background: #E8E8E4;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.checklist-progress-fill {
+  height: 100%;
+  background: var(--lego-green);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  width: 0%;
+}
+.checklist-progress-text {
+  min-width: 40px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.checklist-progress.complete .checklist-progress-fill {
+  background: var(--lego-green);
+}
+.checklist-progress.complete .checklist-progress-text {
+  color: var(--lego-green);
+}
+
+/* ========== FASTRACK STRATEGY ========== */
+.fastrack-section {
+  background: linear-gradient(180deg, #FFF9E6 0%, #FFFDF5 100%);
+}
+.fastrack-header-card {
+  background: linear-gradient(135deg, #1A1A1A, #2D2D2D);
+  color: white;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.fastrack-header-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--lego-gold), var(--lego-yellow), var(--lego-gold));
+}
+.fastrack-header-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.fastrack-header-card .ft-subtitle {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+}
+.fastrack-total {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,179,0,0.15);
+  border: 1px solid rgba(255,179,0,0.3);
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--lego-gold);
+  margin-top: 16px;
+}
+.fastrack-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.ft-slot {
+  background: white;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border-light);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.ft-slot:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.ft-slot-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+.ft-number {
+  width: 36px;
+  height: 36px;
+  background: var(--lego-gold);
+  color: #1A1A1A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(255,179,0,0.3);
+}
+.ft-slot-info {
+  flex: 1;
+  min-width: 0;
+}
+.ft-slot-name {
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ft-slot-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.ft-skip-badge {
+  background: #E8F5E9;
+  color: #2E7D32;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ft-notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.ft-note {
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.ft-note-title {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ========== TIMELINE ========== */
+.timeline-section {
+  background: white;
+  padding-bottom: 0;
+  overflow: visible;
+}
+.timeline-section .section {
+  overflow: visible;
+}
+.timeline-wrap {
+  position: relative;
+  padding-left: 120px;
+}
+.timeline-line {
+  position: absolute;
+  left: 56px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    #BDBDBD 0%,
+    var(--lego-green) 10%,
+    var(--lego-gold) 30%,
+    var(--lego-orange) 45%,
+    var(--lego-gold) 55%,
+    var(--lego-blue) 65%,
+    var(--lego-teal) 78%,
+    #FF8A65 90%,
+    #FFB74D 100%
+  );
+  border-radius: 2px;
+}
+.tl-block {
+  position: relative;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+.tl-block:last-child {
+  margin-bottom: 0;
+}
+.tl-dot {
+  position: absolute;
+  left: -70px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px currentColor, var(--shadow-sm);
+  z-index: 2;
+}
+.tl-time {
+  position: absolute;
+  left: -120px;
+  top: 22px;
+  width: 44px;
+  text-align: right;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  line-height: 1;
+  white-space: nowrap;
+  overflow: visible;
+}
+.tl-card {
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+.tl-phase {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+/* Phase colors */
+.phase-arrival .tl-dot { color: #9E9E9E; background: #9E9E9E; }
+.phase-arrival .tl-card { background: #FAFAFA; border-color: #E0E0E0; }
+.phase-arrival .tl-phase { background: #EEEEEE; color: #616161; }
+
+.phase-morning .tl-dot { color: var(--lego-green); background: var(--lego-green); }
+.phase-morning .tl-card { background: #F1F9F3; border-color: #C8E6C9; }
+.phase-morning .tl-phase { background: #E8F5E9; color: #2E7D32; }
+
+.phase-fastrack .tl-dot { color: var(--lego-gold); background: var(--lego-gold); }
+.phase-fastrack .tl-card { background: linear-gradient(135deg, #FFFDE7, #FFF8E1); border-color: #FFE082; box-shadow: 0 4px 16px rgba(255,179,0,0.12); }
+.phase-fastrack .tl-phase { background: var(--lego-gold); color: #1A1A1A; }
+
+.phase-lunch .tl-dot { color: var(--lego-orange); background: var(--lego-orange); }
+.phase-lunch .tl-card { background: #FFF8F0; border-color: #FFCC80; }
+.phase-lunch .tl-phase { background: #FFF3E0; color: #E65100; }
+
+.phase-explore .tl-dot { color: var(--lego-blue); background: var(--lego-blue); }
+.phase-explore .tl-card { background: #F0F7FD; border-color: #90CAF9; }
+.phase-explore .tl-phase { background: #E3F2FD; color: #1565C0; }
+
+.phase-winddown .tl-dot { color: var(--lego-teal); background: var(--lego-teal); }
+.phase-winddown .tl-card { background: #F0F9F8; border-color: #80CBC4; }
+.phase-winddown .tl-phase { background: #E0F2F1; color: #00695C; }
+
+.phase-golden .tl-dot { color: #FF8A65; background: linear-gradient(135deg, #FF8A65, #FFB74D); }
+.phase-golden .tl-card { background: linear-gradient(135deg, #FFF3E0, #FFFDE7); border-color: #FFCC80; }
+.phase-golden .tl-phase { background: linear-gradient(90deg, #FF8A65, #FFB74D); color: white; }
+
+.tl-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.tl-area {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.tl-details {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.tl-rides {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tl-ride-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: white;
+  border: 1px solid var(--border-light);
+}
+.tl-ride-tag.fastrack {
+  background: linear-gradient(135deg, #FFF8E1, #FFFDE7);
+  border-color: var(--lego-gold);
+  color: #1A1A1A;
+}
+.tl-ride-tag.fastrack::before {
+  content: '★';
+  color: var(--lego-gold);
+}
+.tl-ride-tag.standby {
+  background: #F5F5F5;
+  color: #555;
+}
+.tl-walk-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 0;
+  font-size: 11px;
+  color: #999;
+  font-weight: 500;
+}
+.tl-walk-indicator svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: #BBB;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* ========== RIDES AT A GLANCE ========== */
+.rides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.ride-card {
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.ride-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.ride-card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: #E8E8E4;
+}
+.ride-card-body {
+  padding: 16px;
+}
+.ride-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.ride-card-name {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.ride-type-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.badge-fastrack {
+  background: var(--lego-gold);
+  color: #1A1A1A;
+}
+.badge-standby {
+  background: #EEEEEE;
+  color: #666;
+}
+.ride-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+}
+.ride-card-area {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.ride-wait-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wait-bar-track {
+  flex: 1;
+  height: 6px;
+  background: #F0F0EC;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.wait-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+.wait-bar-fill.low { background: var(--lego-green); }
+.wait-bar-fill.med { background: var(--lego-yellow); }
+.wait-bar-fill.high { background: var(--lego-orange); }
+.wait-bar-fill.very-high { background: var(--lego-red); }
+.wait-label {
+  font-weight: 700;
+  font-size: 12px;
+  white-space: nowrap;
+  min-width: 45px;
+}
+.height-check {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: var(--lego-green);
+}
+
+/* ========== PRO TIPS ========== */
+.tips-section {
+  background: var(--lego-light);
+}
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+.tip-card {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 20px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.tip-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.tip-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+.tip-text strong {
+  color: var(--lego-dark);
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: #1A1A1A;
+  color: rgba(255,255,255,0.7);
+  padding: 48px 20px;
+}
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.footer-brand {
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  max-width: 600px;
+}
+.footer-source-link {
+  font-size: 11px;
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.footer-source-link:hover {
+  background: rgba(255,255,255,0.15);
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+}
+.footer-pplx {
+  color: rgba(255,255,255,0.5);
+  transition: color 0.2s;
+}
+.footer-pplx:hover {
+  color: rgba(255,255,255,0.8);
+}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 16px 40px;
+  }
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  .hero-stats {
+    gap: 8px;
+  }
+  .stat-pill {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  .section {
+    padding: 40px 16px;
+  }
+  .timeline-wrap {
+    padding-left: 80px;
+  }
+  .tl-time {
+    left: -80px;
+    width: 38px;
+    font-size: 10px;
+  }
+  .timeline-line {
+    left: 32px;
+  }
+  .tl-dot {
+    left: -50px;
+    width: 12px;
+    height: 12px;
+  }
+  .tl-card {
+    padding: 18px;
+  }
+  .tl-title {
+    font-size: 16px;
+  }
+  .fastrack-slots {
+    grid-template-columns: 1fr;
+  }
+  .ft-notes {
+    grid-template-columns: 1fr;
+  }
+  .rides-grid {
+    grid-template-columns: 1fr;
+  }
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+  .packing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .prep-tabs {
+    flex-wrap: wrap;
+  }
+  .nav-link {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+  .footer-top {
+    flex-direction: column;
+  }
+  .footer-sources {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .packing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== STICKY NAV ========== -->
+<nav class="sticky-nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-brick"></div>
+      GAME PLAN
+    </a>
+    <a href="#prep" class="nav-link">Before Trip</a>
+    <a href="#fastrack" class="nav-link">Fastrack</a>
+    <a href="#timeline" class="nav-link">Timeline</a>
+    <a href="#rides" class="nav-link">Rides</a>
+    <a href="#tips" class="nav-link">Pro Tips</a>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🎯 Mission Brief</div>
+    <h1>Jackson's LEGOLAND<br>Game Plan</h1>
+    <p class="hero-subtitle">Wednesday, April 1, 2026 &bull; Silver Fastrack</p>
+    <div class="hero-stats">
+      <span class="stat-pill"><span class="icon">🕙</span> Park Hours 10 AM – 7 PM</span>
+      <span class="stat-pill"><span class="icon">📊</span> Crowd Level: Busy (65%)</span>
+      <span class="stat-pill"><span class="icon">☀️</span> Weather: 69°F Sunny</span>
+      <span class="stat-pill"><span class="icon">⚡</span> 6 Fastrack Rides</span>
+      <span class="stat-pill"><span class="icon">👦</span> Jackson, age 4, 43"</span>
+    </div>
+  </div>
+</header>
+
+<hr class="section-divider">
+
+<!-- ========== BEFORE THE TRIP ========== -->
+<section class="prep-section" id="prep">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">Pre-Trip Prep</div>
+      <h2 class="section-title">Before the Trip</h2>
+      <p class="section-subtitle">Get these done before April 1st and the park day will run like clockwork.</p>
+    </div>
+
+    <div class="prep-tabs">
+      <button class="prep-tab active" onclick="switchTab('twoweeks')">Two Weeks Before</button>
+      <button class="prep-tab" onclick="switchTab('nightbefore')">Night Before</button>
+      <button class="prep-tab" onclick="switchTab('packing')">Packing List</button>
+    </div>
+
+    <!-- Two Weeks Before -->
+    <div class="prep-panel active" id="panel-twoweeks">
+    <div class="checklist-progress" id="progress-twoweeks">
+      <span>Progress</span>
+      <div class="checklist-progress-bar"><div class="checklist-progress-fill"></div></div>
+      <span class="checklist-progress-text">0 / 5</span>
+    </div>
+      <div class="checklist-group">
+        <div class="checklist-group-title">
+          <span class="dot" style="background: var(--lego-blue)"></span>
+          Two Weeks Before
+        </div>
+        <ul class="checklist">
+          <li><span class="check-box"></span><div>Buy tickets online if not already purchased — save time at entry</div></li>
+          <li><span class="check-box"></span><div>Purchase <strong>Silver Fastrack add-on ($38/person)</strong> through LEGOLAND website or app</div></li>
+          <li><span class="check-box"></span><div>Pre-book parking online (<strong>$40 standard</strong> or <strong>$55 preferred</strong>) — add license plate for automatic gate entry</div></li>
+          <li><span class="check-box"></span><div>Download the <strong>LEGOLAND California app</strong> — Fastrack scanning, live wait times, and interactive map</div></li>
+          <li><span class="check-box"></span><div>Consider purchasing <strong>Rise &amp; Ride Early Access</strong> for 45 min early entry (rides: Coast Cruise, NINJAGO, Coastersaurus, DUPLO Dino Trail, Explorer River Quest)</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Night Before -->
+    <div class="prep-panel" id="panel-nightbefore">
+    <div class="checklist-progress" id="progress-nightbefore">
+      <span>Progress</span>
+      <div class="checklist-progress-bar"><div class="checklist-progress-fill"></div></div>
+      <span class="checklist-progress-text">0 / 6</span>
+    </div>
+      <div class="checklist-group">
+        <div class="checklist-group-title">
+          <span class="dot" style="background: var(--lego-orange)"></span>
+          Night Before
+        </div>
+        <ul class="checklist">
+          <li class="critical"><span class="check-box"></span><div>Charge phone and portable battery pack — the LEGOLAND app drains battery fast <span class="critical-badge">Critical</span></div></li>
+          <li><span class="check-box"></span><div>Set alarm early — aim to arrive by <strong>9:15 AM</strong> (parking toll opens 45 min before park)</div></li>
+          <li><span class="check-box"></span><div>Check the LEGOLAND app for any ride closures or schedule changes</div></li>
+          <li><span class="check-box"></span><div>Check weather — April 1 forecast: expect high ~69°F, low ~54°F. Mornings chilly, warm by noon.</div></li>
+          <li><span class="check-box"></span><div>Pack the day bag (see Packing List tab)</div></li>
+          <li><span class="check-box"></span><div>Dress Jackson in layers — hoodie for morning, t-shirt underneath for afternoon</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Packing List -->
+    <div class="prep-panel" id="panel-packing">
+    <div class="checklist-progress" id="progress-packing">
+      <span>Progress</span>
+      <div class="checklist-progress-bar"><div class="checklist-progress-fill"></div></div>
+      <span class="checklist-progress-text">0 / 11</span>
+    </div>
+      <div class="checklist-group">
+        <div class="checklist-group-title">
+          <span class="dot" style="background: var(--lego-green)"></span>
+          Packing Checklist
+        </div>
+        <div class="packing-grid">
+          <div class="pack-item critical">
+            <div class="pack-icon red">🔋</div>
+            <div>Portable battery pack <span class="critical-badge">Critical</span></div>
+          </div>
+          <div class="pack-item">
+            <div class="pack-icon yellow">🧴</div>
+            <div>Sunscreen + hats</div>
+          </div>
+          <div class="pack-item">
+            <div class="pack-icon blue">🧥</div>
+            <div>Lightweight jacket / hoodie</div>
+          </div>
+          <div class="pack-item">
+            <div class="pack-icon green">👟</div>
+            <div>Comfortable walking shoes</div>
+          </div>
+          <div class="pack-item">
+            <div class="pack-icon blue">💧</div>
+            <div>Refillable water bottles</div>
+          </div>
+          <div class="pack-item">
+            <div class="pack-icon orange">🍎</div>
+            <div>Snacks — granola bars, fruit snacks (outside food allowed, no glass)</div>
+          </div>
+          <div class="pack-item">
+            <div class="pack-icon teal">🎒</div>
+            <div>Small backpack</div>
+          </div>
+          <div class="pack-item">
+            <div class="pack-icon green">🧻</div>
+            <div>Wet wipes / hand sanitizer</div>
+          </div>
+          <div class="pack-item">
+            <div class="pack-icon blue">👕</div>
+            <div>Change of clothes for Jackson (water rides)</div>
+          </div>
+          <div class="pack-item">
+            <div class="pack-icon yellow">🤐</div>
+            <div>Ziploc bags</div>
+          </div>
+          <div class="pack-item">
+            <div class="pack-icon red">🧱</div>
+            <div>Optional: LEGO minifigures for trading</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ========== FASTRACK STRATEGY ========== -->
+<section class="fastrack-section" id="fastrack">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">Skip-the-Line Strategy</div>
+      <h2 class="section-title">Your Silver Fastrack Plan</h2>
+      <p class="section-subtitle">6 rides, strategically placed to save you maximum time when lines are longest.</p>
+    </div>
+
+    <div class="fastrack-header-card">
+      <h3>Silver Fastrack — 6 Rides from 17 Eligible</h3>
+      <p class="ft-subtitle">Use them wisely. Once they're gone, they're gone.</p>
+      <div class="fastrack-total">⏱️ Total Time Saved: ~4 Hours of Standing in Line</div>
+    </div>
+
+    <div class="fastrack-slots">
+      <div class="ft-slot">
+        <div class="ft-slot-header">
+          <div class="ft-number">1</div>
+          <div class="ft-slot-info">
+            <div class="ft-slot-name">Emmet's Flying Adventure</div>
+            <div class="ft-slot-time">11:15 AM · The LEGO Movie World</div>
+          </div>
+          <div class="ft-skip-badge">Skip 60 min</div>
+        </div>
+      </div>
+      <div class="ft-slot">
+        <div class="ft-slot-header">
+          <div class="ft-number">2</div>
+          <div class="ft-slot-info">
+            <div class="ft-slot-name">Unikitty's Disco Drop</div>
+            <div class="ft-slot-time">11:30 AM · The LEGO Movie World</div>
+          </div>
+          <div class="ft-skip-badge">Skip 40 min</div>
+        </div>
+      </div>
+      <div class="ft-slot">
+        <div class="ft-slot-header">
+          <div class="ft-number">3</div>
+          <div class="ft-slot-info">
+            <div class="ft-slot-name">The Dragon</div>
+            <div class="ft-slot-time">12:45 PM · Castle Hill</div>
+          </div>
+          <div class="ft-skip-badge">Skip 40 min</div>
+        </div>
+      </div>
+      <div class="ft-slot">
+        <div class="ft-slot-header">
+          <div class="ft-number">4</div>
+          <div class="ft-slot-info">
+            <div class="ft-slot-name">LEGO NINJAGO The Ride</div>
+            <div class="ft-slot-time">1:15 PM · NINJAGO World</div>
+          </div>
+          <div class="ft-skip-badge">Skip 40 min</div>
+        </div>
+      </div>
+      <div class="ft-slot">
+        <div class="ft-slot-header">
+          <div class="ft-number">5</div>
+          <div class="ft-slot-info">
+            <div class="ft-slot-name">Coast Cruise</div>
+            <div class="ft-slot-time">2:15 PM · LEGO City</div>
+          </div>
+          <div class="ft-skip-badge">Skip 45 min</div>
+        </div>
+      </div>
+      <div class="ft-slot">
+        <div class="ft-slot-header">
+          <div class="ft-number">6</div>
+          <div class="ft-slot-info">
+            <div class="ft-slot-name">Coastersaurus</div>
+            <div class="ft-slot-time">2:45 PM · Dino Valley</div>
+          </div>
+          <div class="ft-skip-badge">Skip 35 min</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-notes">
+      <div class="ft-note">
+        <div class="ft-note-title">⏱ 5-Minute Cooldown Rule</div>
+        You must wait 5 minutes between Fastrack scans. Plan ride pairs wisely — we've grouped them near each other so you can walk and then scan.
+      </div>
+      <div class="ft-note">
+        <div class="ft-note-title">🚀 LEGO Galaxy = NOT on Fastrack</div>
+        The new LEGO Galaxy land rides (Galacticoaster, G-Force Test Facility, DUPLO Launch and Land) are not included in any Fastrack tier. Hit these at rope drop.
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ========== DAY-OF TIMELINE ========== -->
+<section class="timeline-section" id="timeline">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">The Action Plan</div>
+      <h2 class="section-title">Day-Of Timeline</h2>
+      <p class="section-subtitle">Your minute-by-minute guide from parking lot to exit gate. Follow this and maximize every moment.</p>
+    </div>
+
+    <div class="timeline-wrap">
+      <div class="timeline-line"></div>
+
+      <!-- 9:00 - 9:15 AM -->
+      <div class="tl-block phase-arrival">
+        <div class="tl-time">9:00 AM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">Arrival</div>
+          <h3 class="tl-title">Arrive & Park</h3>
+          <div class="tl-area">📍 Parking Lot</div>
+          <p class="tl-details">Arrive at parking (toll opens ~9:15 AM). Park, unload stroller if using one (rentals available at The Beginning for $17/day). Use restrooms. Grab a paper map at Guest Services.</p>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Walk to entrance gates
+      </div>
+
+      <!-- 9:15 - 10:00 AM -->
+      <div class="tl-block phase-arrival">
+        <div class="tl-time">9:15 AM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">Arrival</div>
+          <h3 class="tl-title">Enter The Beginning</h3>
+          <div class="tl-area">📍 The Beginning</div>
+          <p class="tl-details">Gates open at 9:30 AM for The Beginning area (shops, lobby). Browse while waiting for rides to open at 10:00 AM. Apply sunscreen. Get everyone's Fastrack loaded in the app.</p>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Head straight to the back of the park
+      </div>
+
+      <!-- 10:00 - 10:30 AM -->
+      <div class="tl-block phase-morning">
+        <div class="tl-time">10:00 AM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">🏃 Morning Blitz</div>
+          <h3 class="tl-title">ROPE DROP → LEGO Galaxy (New Land!)</h3>
+          <div class="tl-area">📍 LEGO Galaxy</div>
+          <p class="tl-details">At rope drop, head directly to the back of the park to LEGO Galaxy — the brand new land (opened March 2026). Ride Galacticoaster and G-Force Test Facility first while everyone else lingers near the front. These are NOT on Fastrack, so this is your only chance at short lines.</p>
+          <div class="tl-rides">
+            <span class="tl-ride-tag standby">Galacticoaster</span>
+            <span class="tl-ride-tag standby">G-Force Test Facility</span>
+            <span class="tl-ride-tag standby">DUPLO Launch and Land</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Stay at the back of the park
+      </div>
+
+      <!-- 10:30 - 11:15 AM -->
+      <div class="tl-block phase-morning">
+        <div class="tl-time">10:30 AM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">🏃 Morning Blitz</div>
+          <h3 class="tl-title">LEGO Technic & Land of Adventure</h3>
+          <div class="tl-area">📍 LEGO Technic → Land of Adventure</div>
+          <p class="tl-details">While you're already at the back, knock out rides nearby with short morning lines. Ride LEGO Technic Coaster standby (should be 10-15 min this early), then walk to Land of Adventure for Lost Kingdom Adventure and Beetle Bounce. These are all close together.</p>
+          <div class="tl-rides">
+            <span class="tl-ride-tag standby">LEGO Technic Coaster</span>
+            <span class="tl-ride-tag standby">Lost Kingdom Adventure</span>
+            <span class="tl-ride-tag standby">Beetle Bounce</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Walk to The LEGO Movie World
+      </div>
+
+      <!-- 11:15 AM - 12:00 PM ★ FASTRACK -->
+      <div class="tl-block phase-fastrack">
+        <div class="tl-time">11:15 AM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">★ Fastrack Time</div>
+          <h3 class="tl-title">Emmet's Flying Adventure + LEGO Movie World</h3>
+          <div class="tl-area">📍 The LEGO Movie World &bull; Fastrack #1 & #2 of 6</div>
+          <p class="tl-details">Use FASTRACK #1 on Emmet's Flying Adventure — by now standby lines are 45-60+ min. After Emmet's, use FASTRACK #2 on Unikitty's Disco Drop (right next door, 5-min cooldown between scans). Grab Queen Watevra's Carousel standby (10 min) while in the area.</p>
+          <div class="tl-rides">
+            <span class="tl-ride-tag fastrack">Emmet's Flying Adventure</span>
+            <span class="tl-ride-tag fastrack">Unikitty's Disco Drop</span>
+            <span class="tl-ride-tag standby">Queen Watevra's Carousel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Head to lunch — eat early!
+      </div>
+
+      <!-- 12:00 - 12:45 PM LUNCH -->
+      <div class="tl-block phase-lunch">
+        <div class="tl-time">12:00 PM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">🍽 Lunch Break</div>
+          <h3 class="tl-title">Early Lunch</h3>
+          <div class="tl-area">📍 Fun Town / Castle Hill dining</div>
+          <p class="tl-details">Eat early (before the 12:30 rush). Options: Taco Truck near Fun Town, or Knight's Smoke BBQ near Castle Hill. <strong>Granny's Apple Fries are a must-try snack.</strong> Let Jackson rest and refuel. Check the app for current wait times to plan your afternoon.</p>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Walk to Castle Hill
+      </div>
+
+      <!-- 12:45 - 1:30 PM ★ FASTRACK -->
+      <div class="tl-block phase-fastrack">
+        <div class="tl-time">12:45 PM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">★ Fastrack Time</div>
+          <h3 class="tl-title">Castle Hill — The Dragon + NINJAGO</h3>
+          <div class="tl-area">📍 Castle Hill → NINJAGO World &bull; Fastrack #3 & #4 of 6</div>
+          <p class="tl-details">Use FASTRACK #3 on The Dragon — lines are at their peak now (40+ min standby). After The Dragon, walk to NINJAGO World and use FASTRACK #4 on LEGO NINJAGO The Ride. Let Jackson explore NINJAGO Training Camp playground between rides (great energy burn).</p>
+          <div class="tl-rides">
+            <span class="tl-ride-tag fastrack">The Dragon</span>
+            <span class="tl-ride-tag fastrack">LEGO NINJAGO The Ride</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Walk to Fun Town
+      </div>
+
+      <!-- 1:30 - 2:15 PM EXPLORE -->
+      <div class="tl-block phase-explore">
+        <div class="tl-time">1:30 PM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">🗺 Explore</div>
+          <h3 class="tl-title">Fun Town & LEGO City</h3>
+          <div class="tl-area">📍 Fun Town → LEGO City</div>
+          <p class="tl-details">Walk to Fun Town for Junior Driving School — Jackson is the perfect age (3-5) and gets a LEGOLAND driver's license! Then head to LEGO City for Deep Sea Adventure standby (usually 15 min). Both are near the front of the park.</p>
+          <div class="tl-rides">
+            <span class="tl-ride-tag standby">Junior Driving School</span>
+            <span class="tl-ride-tag standby">Deep Sea Adventure</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Head to LEGO City → Dino Valley
+      </div>
+
+      <!-- 2:15 - 3:00 PM ★ FASTRACK -->
+      <div class="tl-block phase-fastrack">
+        <div class="tl-time">2:15 PM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">★ Fastrack Time</div>
+          <h3 class="tl-title">Coast Cruise + Coastersaurus</h3>
+          <div class="tl-area">📍 LEGO City → Dino Valley &bull; Fastrack #5 & #6 of 6 — ALL USED ✅</div>
+          <p class="tl-details">Use FASTRACK #5 on Coast Cruise — the line is deceptively long (45 min avg) but the ride is a relaxing boat tour through MINILAND. Then head to Dino Valley and use FASTRACK #6 on Coastersaurus (Silver-exclusive coaster). <strong>All 6 Fastrack uses complete!</strong></p>
+          <div class="tl-rides">
+            <span class="tl-ride-tag fastrack">Coast Cruise</span>
+            <span class="tl-ride-tag fastrack">Coastersaurus</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Explore at your own pace
+      </div>
+
+      <!-- 3:00 - 4:00 PM WIND DOWN -->
+      <div class="tl-block phase-winddown">
+        <div class="tl-time">3:00 PM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">🌿 Wind Down</div>
+          <h3 class="tl-title">Afternoon Exploring & Short-Wait Rides</h3>
+          <div class="tl-area">📍 Dino Valley → Castle Hill → Various</div>
+          <p class="tl-details">Crowds start thinning as families leave. Great time for short-wait rides. Walk through MINILAND USA for the incredible LEGO landmarks. Let Jackson play at Hideaways playground in Castle Hill.</p>
+          <div class="tl-rides">
+            <span class="tl-ride-tag standby">Explorer River Quest</span>
+            <span class="tl-ride-tag standby">Kid Power Tower</span>
+            <span class="tl-ride-tag standby">Royal Joust</span>
+            <span class="tl-ride-tag standby">Sky Patrol</span>
+            <span class="tl-ride-tag standby">MINILAND USA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Head to Pirate Shores if warm
+      </div>
+
+      <!-- 4:00 - 5:00 PM WIND DOWN -->
+      <div class="tl-block phase-winddown">
+        <div class="tl-time">4:00 PM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">🌿 Wind Down</div>
+          <h3 class="tl-title">Water Rides & Pirate Shores</h3>
+          <div class="tl-area">📍 Pirate Shores → LEGO City</div>
+          <p class="tl-details">If it's warm enough and Jackson is up for it, hit Pirate Reef and Splash Battle at Pirate Shores, plus Skipper School (where he drives his own boat). These rides will get you wet — this is why you packed the change of clothes. If Jackson is tired, skip water rides and re-ride favorites instead.</p>
+          <div class="tl-rides">
+            <span class="tl-ride-tag standby">Skipper School</span>
+            <span class="tl-ride-tag standby">Pirate Reef</span>
+            <span class="tl-ride-tag standby">Splash Battle</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Re-ride favorites & shop
+      </div>
+
+      <!-- 5:00 - 6:00 PM GOLDEN HOUR -->
+      <div class="tl-block phase-golden">
+        <div class="tl-time">5:00 PM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">🌅 Golden Hour</div>
+          <h3 class="tl-title">Re-Ride Favorites & Shopping</h3>
+          <div class="tl-area">📍 Various → The Beginning</div>
+          <p class="tl-details">Lines are at their shortest now. Re-ride Jackson's favorites — The Dragon, NINJAGO, or Emmet's if he loved them (standby waits drop to 15-20 min by now). Browse The Big Shop near the exit for LEGO souvenirs. This is also a great time for the LEGOLAND Express train ride.</p>
+          <div class="tl-rides">
+            <span class="tl-ride-tag standby">Re-ride Favorites</span>
+            <span class="tl-ride-tag standby">LEGOLAND Express</span>
+            <span class="tl-ride-tag standby">The Big Shop</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-walk-indicator">
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Head toward the exit
+      </div>
+
+      <!-- 6:00 - 7:00 PM GOLDEN HOUR -->
+      <div class="tl-block phase-golden">
+        <div class="tl-time">6:00 PM</div>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-phase">🌅 Golden Hour</div>
+          <h3 class="tl-title">Final Rides & Exit</h3>
+          <div class="tl-area">📍 Various → Exit</div>
+          <p class="tl-details">Last chance for any rides you missed. Lines are minimal now. Head toward the exit gradually. The park closes at 7:00 PM. Stop for one last Granny's Apple Fries or ice cream on the way out. What a day!</p>
+        </div>
+      </div>
+
+    </div><!-- /timeline-wrap -->
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ========== RIDES AT A GLANCE ========== -->
+<section id="rides">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">Ride Reference</div>
+      <h2 class="section-title">Rides at a Glance</h2>
+      <p class="section-subtitle">Every ride Jackson can do. Green check = he meets the height requirement.</p>
+    </div>
+
+    <div class="rides-grid">
+
+      <!-- Emmet's Flying Adventure -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/kv1atkg5/the_lego-_-movie-_-masters_of_-flight_1400x800.jpg?format=jpg" alt="Emmet's Flying Adventure" style="background:#FFD500;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Emmet's Flying Adventure</div>
+            <span class="ride-type-badge badge-fastrack">★ Fastrack</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">The LEGO Movie World · Flying Theater</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">60 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill very-high" style="width:100%"></div></div>
+            </div>
+            <div class="height-check">✅ 40" min — Jackson is 43"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Dragon -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/ilalbfv4/the-dragon-3-2.jpg?format=jpg" alt="The Dragon" style="background:#DA291C;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">The Dragon</div>
+            <span class="ride-type-badge badge-fastrack">★ Fastrack</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">Castle Hill · Roller Coaster</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">40 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill high" style="width:67%"></div></div>
+            </div>
+            <div class="height-check">✅ 40" min — Jackson is 43"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEGO NINJAGO The Ride -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/y2ofegud/lego-ninjago-1-1.png" alt="LEGO NINJAGO The Ride" style="background:#006CB7;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">LEGO NINJAGO The Ride</div>
+            <span class="ride-type-badge badge-fastrack">★ Fastrack</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">NINJAGO World · Interactive Dark Ride</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">40 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill high" style="width:67%"></div></div>
+            </div>
+            <div class="height-check">✅ No minimum height</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unikitty's Disco Drop -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/lo0kg23z/tlmw1-unkitty-in-air-sign.jpg" alt="Unikitty's Disco Drop" style="background:#FFD500;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Unikitty's Disco Drop</div>
+            <span class="ride-type-badge badge-fastrack">★ Fastrack</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">The LEGO Movie World · Drop Tower</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">40 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill high" style="width:67%"></div></div>
+            </div>
+            <div class="height-check">✅ 40" min — Jackson is 43"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coast Cruise -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/tkghdtvq/58_coast-cruise.jpg?format=jpg" alt="Coast Cruise" style="background:#006CB7;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Coast Cruise</div>
+            <span class="ride-type-badge badge-fastrack">★ Fastrack</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">MINILAND · Boat Cruise</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">45 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill high" style="width:75%"></div></div>
+            </div>
+            <div class="height-check">✅ No minimum with adult</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coastersaurus -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/rc1fgge1/llcr-dino-brand-site-graphic-2000x1000.jpg?format=jpg" alt="Coastersaurus" style="background:#00AF4D;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Coastersaurus</div>
+            <span class="ride-type-badge badge-fastrack">★ Fastrack</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">Dino Valley · Family Coaster</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">35 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill med" style="width:58%"></div></div>
+            </div>
+            <div class="height-check">✅ 36" min — Jackson is 43"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEGO Technic Coaster -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/v2lflvd3/technic-desktop-header.jpg?format=jpg" alt="LEGO Technic Coaster" style="background:#DA291C;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">LEGO Technic Coaster</div>
+            <span class="ride-type-badge badge-standby">Standby</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">LEGO Technic · Wild Mouse Coaster</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">35 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill med" style="width:58%"></div></div>
+            </div>
+            <div class="height-check">✅ 42" min & age 4+ — Jackson just makes it!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lost Kingdom Adventure -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/uwhho0ae/lost-kingdom-adventure-1-1.png" alt="Lost Kingdom Adventure" style="background:#FFD500;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Lost Kingdom Adventure</div>
+            <span class="ride-type-badge badge-standby">Standby</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">Land of Adventure · Dark Ride Shooter</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">20 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill low" style="width:33%"></div></div>
+            </div>
+            <div class="height-check">✅ 30" min — Jackson is 43"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deep Sea Adventure -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/ykulhxpe/lego-city-deep-sea-adventure.jpg?format=jpg" alt="Deep Sea Adventure" style="background:#006CB7;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Deep Sea Adventure</div>
+            <span class="ride-type-badge badge-standby">Standby</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">LEGO City · Submarine Ride</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">15 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill low" style="width:25%"></div></div>
+            </div>
+            <div class="height-check">✅ No minimum height</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Junior Driving School -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/u0xmska5/jds-square-2.jpg?format=webp&quality=80&width=1200&height=1200" alt="Junior Driving School" style="background:#00AF4D;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Junior Driving School</div>
+            <span class="ride-type-badge badge-standby">Standby</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">Fun Town · Driving Experience</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">20 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill low" style="width:33%"></div></div>
+            </div>
+            <div class="height-check">✅ Ages 3-5 — perfect for Jackson!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skipper School -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/xjagbstp/skipper-school.jpg" alt="Skipper School" style="background:#006CB7;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Skipper School</div>
+            <span class="ride-type-badge badge-standby">Standby</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">Pirate Shores · Kid-Operated Boat</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">30 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill med" style="width:50%"></div></div>
+            </div>
+            <div class="height-check">✅ 34" min — Jackson is 43"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kid Power Tower -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/dqnnryl1/2011-10-07_legolandaaa_0092.jpg" alt="Kid Power Tower" style="background:#FFD500;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Kid Power Tower</div>
+            <span class="ride-type-badge badge-standby">Standby</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">Castle Hill · Self-Pull Tower</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">10 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill low" style="width:17%"></div></div>
+            </div>
+            <div class="height-check">✅ 40" min — Jackson is 43"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Explorer River Quest -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/ududcrie/explorer-river-quest-3.jpg" alt="Explorer River Quest" style="background:#00AF4D;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Explorer River Quest</div>
+            <span class="ride-type-badge badge-standby">Standby</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">Land of Adventure · River Raft</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">10 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill low" style="width:17%"></div></div>
+            </div>
+            <div class="height-check">✅ No minimum height</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pirate Reef -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/xb2efvjf/pirate-reef-7-5.png" alt="Pirate Reef" style="background:#DA291C;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Pirate Reef</div>
+            <span class="ride-type-badge badge-standby">Standby</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">Pirate Shores · Water Battle</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">15 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill low" style="width:25%"></div></div>
+            </div>
+            <div class="height-check">✅ 36" min — Jackson is 43"</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Queen Watevra's Carousel -->
+      <div class="ride-card">
+        <img class="ride-card-img" loading="lazy" src="https://www.legoland.com/california/media/5uymygxd/legolandreopening_727.jpg" alt="Queen Watevra's Carousel" style="background:#FFD500;">
+        <div class="ride-card-body">
+          <div class="ride-card-top">
+            <div class="ride-card-name">Queen Watevra's Carousel</div>
+            <span class="ride-type-badge badge-standby">Standby</span>
+          </div>
+          <div class="ride-card-meta">
+            <div class="ride-card-area">The LEGO Movie World · Carousel</div>
+            <div class="ride-wait-bar">
+              <span class="wait-label">10 min</span>
+              <div class="wait-bar-track"><div class="wait-bar-fill low" style="width:17%"></div></div>
+            </div>
+            <div class="height-check">✅ No minimum with adult</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /rides-grid -->
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ========== PRO TIPS ========== -->
+<section class="tips-section" id="tips">
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">Insider Knowledge</div>
+      <h2 class="section-title">Pro Tips</h2>
+      <p class="section-subtitle">Tricks and tips to make your day even smoother.</p>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-icon" style="background:#FFF3E0;">⏱</div>
+        <div class="tip-text"><strong>5-min Fastrack cooldown</strong> between uses — plan your pairs wisely (Emmet's + Unikitty, Dragon + NINJAGO, Coast Cruise + Coastersaurus)</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon" style="background:#E3F2FD;">📱</div>
+        <div class="tip-text"><strong>LEGOLAND app shows live wait times</strong> — check before walking to a ride. It also does Fastrack scanning.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon" style="background:#E8F5E9;">🚀</div>
+        <div class="tip-text"><strong>LEGO Galaxy land is brand new</strong> (March 2026) and will be the most crowded area — hit it at rope drop before anyone else.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon" style="background:#FCE4EC;">🧱</div>
+        <div class="tip-text"><strong>Minifigure trading:</strong> bring small LEGO minifigures from home and trade with park employees wearing lanyards. Jackson will love it!</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon" style="background:#F3E5F5;">👶</div>
+        <div class="tip-text"><strong>Stroller rental: $17/day</strong> at The Beginning — worth it for a 4-year-old who will walk 3+ miles.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon" style="background:#E0F2F1;">💧</div>
+        <div class="tip-text"><strong>Free water refill stations</strong> throughout the park — bring reusable bottles and save money.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon" style="background:#FFFDE7;">👨‍👩‍👦</div>
+        <div class="tip-text"><strong>Parent Swap:</strong> if one parent wants to ride something Jackson can't, use parent rider swap so nobody waits in line twice.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon" style="background:#E8F5E9;">🛝</div>
+        <div class="tip-text"><strong>Need a break?</strong> NINJAGO Training Camp, Hideaways playground, and Benny's Playship are great no-line play areas when Jackson needs to decompress.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon" style="background:#FFF3E0;">🍎</div>
+        <div class="tip-text"><strong>Granny's Apple Fries</strong> near the front of the park are the #1 must-try LEGOLAND snack. Don't leave without trying them!</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-icon" style="background:#E3F2FD;">🚻</div>
+        <div class="tip-text"><strong>Restroom locations:</strong> The Beginning, Fun Town, Castle Hill, NINJAGO World, and Dino Valley. Plan stops accordingly.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-brick" style="background:var(--lego-yellow);"></div>
+        Jackson's LEGOLAND Game Plan
+      </div>
+      <div class="footer-sources">
+        <a href="https://www.legoland.com/california/tickets-passes/extras-experiences/fastrack/" class="footer-source-link" target="_blank">LEGOLAND Fastrack</a>
+        <a href="https://www.legoland.com/california/plan-your-visit/planning-tools/opening-hours/" class="footer-source-link" target="_blank">Park Hours</a>
+        <a href="https://www.legoland.com/california/plan-your-visit/planning-tools/directions/" class="footer-source-link" target="_blank">Parking</a>
+        <a href="https://www.legoland.com/california/things-to-do/theme-park/" class="footer-source-link" target="_blank">Rides</a>
+        <a href="https://www.legoland.com/california/plan-your-visit/planning-tools/park-map/" class="footer-source-link" target="_blank">Park Map</a>
+        <a href="https://california-support.legoland.com/hc/en-us/articles/360001323192" class="footer-source-link" target="_blank">Height Requirements</a>
+        <a href="https://www.thrill-data.com/park-hours/legoland-california" class="footer-source-link" target="_blank">Thrill Data Hours</a>
+        <a href="https://www.thrill-data.com/waits/park/lego/legoland-california/graphs/current/ds/average" class="footer-source-link" target="_blank">Thrill Data Waits</a>
+        <a href="https://queue-times.com/parks/279/calendar/2026/04/01" class="footer-source-link" target="_blank">Queue Times</a>
+        <a href="https://wanderlog.com/weather/58368/4/carlsbad-weather-in-april" class="footer-source-link" target="_blank">Weather Data</a>
+        <a href="https://lajollamom.com/legoland-california-fastrack/" class="footer-source-link" target="_blank">La Jolla Mom</a>
+        <a href="https://www.marcieinmommyland.com/legoland-packing-list/" class="footer-source-link" target="_blank">Packing Tips</a>
+        <a href="https://ophalenadventures.com/best-rides-at-legoland-california-insider-tips-on-what-to-do-first/" class="footer-source-link" target="_blank">Ride Tips</a>
+        <a href="https://www.reddit.com/r/legoland/comments/1e6kc36/legoland_california_app_wait_times_accurate/" class="footer-source-link" target="_blank">Reddit Tips</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Trip Date: Wednesday, April 1, 2026 · Silver Fastrack ($38/person)</span>
+      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer" class="footer-pplx">Created with Perplexity Computer</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ========== TAB SWITCHING ==========
+function switchTab(tabName) {
+  document.querySelectorAll('.prep-tab').forEach(tab => tab.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  document.querySelectorAll('.prep-panel').forEach(panel => panel.classList.remove('active'));
+  document.getElementById('panel-' + tabName).classList.add('active');
+}
+
+// ========== SMOOTH SCROLL ==========
+document.querySelectorAll('.nav-link, .nav-logo').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+// ========== NAV HIGHLIGHT ==========
+const sections = document.querySelectorAll('section[id], header[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.style.background = '';
+        link.style.color = '';
+        if (link.getAttribute('href') === '#' + id) {
+          link.style.background = 'var(--lego-yellow)';
+          link.style.color = 'var(--lego-dark)';
+        }
+      });
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-60px 0px 0px 0px' });
+sections.forEach(s => observer.observe(s));
+
+// ========== INTERACTIVE CHECKLISTS ==========
+const STORAGE_KEY = 'legoland-checklist-state';
+
+// Load saved state from localStorage
+function loadState() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved ? JSON.parse(saved) : {};
+  } catch(e) { return {}; }
+}
+
+// Save state to localStorage
+function saveState(state) {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
+}
+
+// Update progress bar for a given panel
+function updateProgress(panelId) {
+  const panel = document.getElementById('panel-' + panelId);
+  const progressEl = document.getElementById('progress-' + panelId);
+  if (!panel || !progressEl) return;
+
+  let total, checked;
+  if (panelId === 'packing') {
+    const items = panel.querySelectorAll('.pack-item');
+    total = items.length;
+    checked = panel.querySelectorAll('.pack-item.checked').length;
+  } else {
+    const items = panel.querySelectorAll('.checklist li');
+    total = items.length;
+    checked = panel.querySelectorAll('.checklist li.checked').length;
+  }
+
+  const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+  progressEl.querySelector('.checklist-progress-fill').style.width = pct + '%';
+  progressEl.querySelector('.checklist-progress-text').textContent = checked + ' / ' + total;
+  progressEl.classList.toggle('complete', checked === total && total > 0);
+}
+
+// Initialize all checklists
+function initChecklists() {
+  const state = loadState();
+
+  // --- Checklist items (Two Weeks Before & Night Before) ---
+  document.querySelectorAll('.checklist li').forEach((li, index) => {
+    const panel = li.closest('.prep-panel');
+    const panelId = panel ? panel.id.replace('panel-', '') : 'unknown';
+    const key = panelId + '-' + index;
+
+    // Restore saved state
+    if (state[key]) li.classList.add('checked');
+
+    // Click handler — toggle on click anywhere on the row
+    li.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.classList.toggle('checked');
+      const currentState = loadState();
+      if (this.classList.contains('checked')) {
+        currentState[key] = true;
+      } else {
+        delete currentState[key];
+      }
+      saveState(currentState);
+      updateProgress(panelId);
+    });
+  });
+
+  // --- Packing items ---
+  document.querySelectorAll('.pack-item').forEach((item, index) => {
+    const key = 'packing-' + index;
+
+    // Restore saved state
+    if (state[key]) item.classList.add('checked');
+
+    // Click handler
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      this.classList.toggle('checked');
+      const currentState = loadState();
+      if (this.classList.contains('checked')) {
+        currentState[key] = true;
+      } else {
+        delete currentState[key];
+      }
+      saveState(currentState);
+      updateProgress('packing');
+    });
+  });
+
+  // Initialize all progress bars
+  updateProgress('twoweeks');
+  updateProgress('nightbefore');
+  updateProgress('packing');
+}
+
+// Run on DOM ready
+initChecklists();
+</script>
+
+</body>
+</html>
