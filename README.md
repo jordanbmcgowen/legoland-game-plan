@@ -19,9 +19,19 @@ Single-file static site — just `index.html` with embedded CSS and JavaScript. 
 - localStorage for checklist persistence
 - Mobile responsive
 
-## Live Site
+## Deployment
 
-Deployed at: [Jackson's LEGOLAND Game Plan](https://www.perplexity.ai/computer/a/jackson-s-legoland-game-plan-_DPQ2txWT8aha8OTNLhBEA)
+Hosted on **Cloudflare Pages** via GitHub Actions. Every push to `main` triggers an automatic deploy.
+
+### Setup
+
+1. Create a Cloudflare Pages project named `legoland-game-plan` in your [Cloudflare dashboard](https://dash.cloudflare.com/)
+2. Add these GitHub repository secrets:
+   - `CLOUDFLARE_API_TOKEN` — API token with Cloudflare Pages edit permissions
+   - `CLOUDFLARE_ACCOUNT_ID` — Your Cloudflare account ID
+3. Push to `main` to trigger deployment
+
+Your site will be live at `https://legoland-game-plan.pages.dev`
 
 ## Sources
 

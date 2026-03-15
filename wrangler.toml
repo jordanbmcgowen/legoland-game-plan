@@ -1,0 +1,5 @@
+name = "legoland-game-plan"
+compatibility_date = "2026-03-15"
+
+[pages]
+directory = "."
