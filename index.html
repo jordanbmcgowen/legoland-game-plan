@@ -20,7 +20,9 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A complete day-of game plan for visiting LEGOLAND California on April 1, 2026 with a 4-year-old. Includes Silver Fastrack strategy, minute-by-minute timeline, interactive checklists, and pro tips.">
 <title>Jackson's LEGOLAND Game Plan — April 1, 2026</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect x='2' y='12' width='32' height='20' rx='3' fill='%23DA291C'/><rect x='7' y='6' width='8' height='8' rx='3' fill='%23DA291C'/><rect x='21' y='6' width='8' height='8' rx='3' fill='%23DA291C'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -140,9 +142,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   left: 3px;
   width: 7px;
   height: 5px;
-  background: var(--lego-red);
+  background: var(--brick-color, var(--lego-red));
   border-radius: 3px 3px 0 0;
-  box-shadow: 11px 0 0 var(--lego-red);
+  box-shadow: 11px 0 0 var(--brick-color, var(--lego-red));
 }
 .nav-link {
   padding: 6px 12px;
@@ -154,7 +156,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   white-space: nowrap;
   flex-shrink: 0;
 }
-.nav-link:hover {
+.nav-link:hover, .nav-link.active {
   background: var(--lego-yellow);
   color: var(--lego-dark);
 }
@@ -543,6 +545,22 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .checklist-progress.complete .checklist-progress-text {
   color: var(--lego-green);
+}
+.checklist-reset {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: #F0F0EC;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  flex-shrink: 0;
+}
+.checklist-reset:hover {
+  background: #FDECEA;
+  color: var(--lego-red);
 }
 
 /* ========== FASTRACK STRATEGY ========== */
@@ -1057,6 +1075,47 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: rgba(255,255,255,0.8);
 }
 
+/* ========== BACK TO TOP ========== */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--lego-red);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: var(--shadow-lg);
+  z-index: 99;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s, background 0.2s;
+  pointer-events: none;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: #B71C1C;
+}
+
+/* ========== SCROLL REVEAL ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
   .hero {
@@ -1132,6 +1191,20 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     grid-template-columns: 1fr;
   }
 }
+
+/* ========== PRINT STYLES ========== */
+@media print {
+  .sticky-nav, .back-to-top, .checklist-reset, .checklist-progress { display: none !important; }
+  .hero { padding-top: 20px; }
+  .prep-panel { display: block !important; page-break-inside: avoid; margin-bottom: 20px; }
+  .prep-tabs { display: none; }
+  .section { padding: 20px 0; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .ride-card, .ft-slot, .tip-card, .tl-block { break-inside: avoid; }
+  .rides-grid, .fastrack-slots, .tips-grid { grid-template-columns: 1fr 1fr; }
+  body { font-size: 12px; }
+  .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
 </style>
 </head>
 <body>
@@ -1179,9 +1252,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     </div>
 
     <div class="prep-tabs">
-      <button class="prep-tab active" onclick="switchTab('twoweeks')">Two Weeks Before</button>
-      <button class="prep-tab" onclick="switchTab('nightbefore')">Night Before</button>
-      <button class="prep-tab" onclick="switchTab('packing')">Packing List</button>
+      <button class="prep-tab active" onclick="switchTab('twoweeks', this)">Two Weeks Before</button>
+      <button class="prep-tab" onclick="switchTab('nightbefore', this)">Night Before</button>
+      <button class="prep-tab" onclick="switchTab('packing', this)">Packing List</button>
     </div>
 
     <!-- Two Weeks Before -->
@@ -1190,6 +1263,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
       <span>Progress</span>
       <div class="checklist-progress-bar"><div class="checklist-progress-fill"></div></div>
       <span class="checklist-progress-text">0 / 5</span>
+      <button class="checklist-reset" onclick="resetChecklist('twoweeks')">Reset</button>
     </div>
       <div class="checklist-group">
         <div class="checklist-group-title">
@@ -1212,6 +1286,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
       <span>Progress</span>
       <div class="checklist-progress-bar"><div class="checklist-progress-fill"></div></div>
       <span class="checklist-progress-text">0 / 6</span>
+      <button class="checklist-reset" onclick="resetChecklist('nightbefore')">Reset</button>
     </div>
       <div class="checklist-group">
         <div class="checklist-group-title">
@@ -1235,6 +1310,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
       <span>Progress</span>
       <div class="checklist-progress-bar"><div class="checklist-progress-fill"></div></div>
       <span class="checklist-progress-text">0 / 11</span>
+      <button class="checklist-reset" onclick="resetChecklist('packing')">Reset</button>
     </div>
       <div class="checklist-group">
         <div class="checklist-group-title">
@@ -2023,12 +2099,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 <hr class="section-divider">
 
+<!-- Back to Top -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
 <!-- ========== FOOTER ========== -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="nav-brick" style="background:var(--lego-yellow);"></div>
+        <div class="nav-brick" style="background:var(--lego-yellow);--brick-color:var(--lego-yellow);"></div>
         Jackson's LEGOLAND Game Plan
       </div>
       <div class="footer-sources">
@@ -2057,9 +2136,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 <script>
 // ========== TAB SWITCHING ==========
-function switchTab(tabName) {
+function switchTab(tabName, btn) {
   document.querySelectorAll('.prep-tab').forEach(tab => tab.classList.remove('active'));
-  event.currentTarget.classList.add('active');
+  btn.classList.add('active');
   document.querySelectorAll('.prep-panel').forEach(panel => panel.classList.remove('active'));
   document.getElementById('panel-' + tabName).classList.add('active');
 }
@@ -2084,12 +2163,7 @@ const observer = new IntersectionObserver(entries => {
     if (entry.isIntersecting) {
       const id = entry.target.id;
       navLinks.forEach(link => {
-        link.style.background = '';
-        link.style.color = '';
-        if (link.getAttribute('href') === '#' + id) {
-          link.style.background = 'var(--lego-yellow)';
-          link.style.color = 'var(--lego-dark)';
-        }
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
       });
     }
   });
@@ -2097,14 +2171,18 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(s => observer.observe(s));
 
 // ========== INTERACTIVE CHECKLISTS ==========
-let _checkState = {};
-
 function loadState() {
-  return _checkState;
+  try {
+    return JSON.parse(localStorage.getItem('legoland-checklist') || '{}');
+  } catch (e) {
+    return {};
+  }
 }
 
 function saveState(state) {
-  _checkState = state;
+  try {
+    localStorage.setItem('legoland-checklist', JSON.stringify(state));
+  } catch (e) { /* quota exceeded or private browsing */ }
 }
 
 // Update progress bar for a given panel
@@ -2128,6 +2206,27 @@ function updateProgress(panelId) {
   progressEl.querySelector('.checklist-progress-fill').style.width = pct + '%';
   progressEl.querySelector('.checklist-progress-text').textContent = checked + ' / ' + total;
   progressEl.classList.toggle('complete', checked === total && total > 0);
+}
+
+// Reset a specific checklist panel
+function resetChecklist(panelId) {
+  const panel = document.getElementById('panel-' + panelId);
+  if (!panel) return;
+  const state = loadState();
+  if (panelId === 'packing') {
+    panel.querySelectorAll('.pack-item.checked').forEach((item, i) => {
+      item.classList.remove('checked');
+    });
+    // Remove all packing keys
+    Object.keys(state).forEach(k => { if (k.startsWith('packing-')) delete state[k]; });
+  } else {
+    panel.querySelectorAll('.checklist li.checked').forEach(li => {
+      li.classList.remove('checked');
+    });
+    Object.keys(state).forEach(k => { if (k.startsWith(panelId + '-')) delete state[k]; });
+  }
+  saveState(state);
+  updateProgress(panelId);
 }
 
 // Initialize all checklists
@@ -2188,6 +2287,24 @@ function initChecklists() {
 
 // Run on DOM ready
 initChecklists();
+
+// ========== BACK TO TOP ==========
+const backToTop = document.querySelector('.back-to-top');
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('visible', window.scrollY > 600);
+}, { passive: true });
+
+// ========== SCROLL REVEAL ==========
+document.querySelectorAll('.ft-slot, .ride-card, .tip-card, .tl-block').forEach(el => el.classList.add('reveal'));
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 </script>
 
 </body>
